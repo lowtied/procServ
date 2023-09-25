@@ -3,7 +3,7 @@
  * GNU Public License (GPLv3) applies - see www.gnu.org */
 
 #include <unistd.h>
-#include <stropts.h>
+#include <sys/ioctl.h>
 #include <stdlib.h>
 #include <string.h>
 #include <fcntl.h>
@@ -21,8 +21,8 @@ int forkpty(int* fdm, char* name, void* x1, void* x2)
     c = ptsname(ptm);                   /* get name of slave */
     if (c) strcpy(name, c);
     pts = open(name, O_RDWR);           /* open slave */
-    ioctl(pts, I_PUSH, "ptem");         /* push ptem */
-    ioctl(pts, I_PUSH, "ldterm");       /* push ldterm */
+    ioctl(pts, TIOCPKT, "ptem");        /* push ptem */
+    ioctl(pts, TIOCPKT, "ldterm");      /* push ldterm */
 
     /* From forums.sun.com */
     pid = fork();
