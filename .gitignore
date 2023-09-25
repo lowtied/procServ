@@ -1,62 +1,138 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Created by https://www.toptal.com/developers/gitignore/api/c,c++,meson,ninja,linux,vim
+# Edit at https://www.toptal.com/developers/gitignore?templates=c,c++,meson,ninja,linux,vim
 
-# Object file directories with EPICS build
-O.*
+### C ###
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
 
 # Precompiled Headers
 *.gch
 *.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
+# Libraries
 *.lib
-*.map
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
 
 # Executables
 *.exe
 *.out
 *.app
-procServ
+*.i*86
+*.x86_64
+*.hex
 
-# Automake generated files
-Makefile
-Makefile.in
-Makefile.Automake.in
-configure
-build-aux
-aclocal.m4
-autom4te.cache
-config.log
-config.status
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
 
-# Generated docs
-docbook-xsl.css
-pid.txt
-procServ.1
-procServ.xml
-procServ.fo
-procServ.html
-procServ.pdf
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
 
-# IDE configuration
-/QtC-*
-/.qtc_*
-.deps
+### C++ ###
+# Prerequisites
 
-# python
-*.pyc
-*.pyo
+# Compiled Object files
+*.slo
+
+# Precompiled Headers
+
+# Compiled Dynamic libraries
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+
+# Executables
+
+### Linux ###
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+### Meson ###
+# subproject directories
+/subprojects/*
+!/subprojects/*.wrap
+
+# Meson Directories
+meson-logs
+meson-private
+
+# Meson Files
+meson_benchmark_setup.dat
+meson_test_setup.dat
+sanitycheckcpp.cc     # C++ specific
+sanitycheckcpp.exe    # C++ specific
+
+# Ninja
+build.ninja
+.ninja_deps
+.ninja_logs
+
+# Misc
+compile_commands.json
+
+### Ninja ###
+.ninja_log
+
+### Vim ###
+# Swap
+[._]*.s[a-v][a-z]
+!*.svg  # comment out if you don't need vector files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+
+# Session
+Session.vim
+Sessionx.vim
+
+# Temporary
+.netrwhist
+# Auto-generated tag files
+tags
+# Persistent undo
+[._]*.un~
+
+# End of https://www.toptal.com/developers/gitignore/api/c,c++,meson,ninja,linux,vim
