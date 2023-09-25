@@ -30,7 +30,7 @@
 #define PRINTF if (inDebugMode) printf
 #endif
 
-#define PROCSERV_VERSION_STRING PACKAGE_STRING
+#include "config.h"
 
 enum RestartMode { restart, norestart, oneshot };
 
